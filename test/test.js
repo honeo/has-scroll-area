@@ -17,17 +17,18 @@ const nightmare = Nightmare({
 });
 
 nightmare
-	.goto('file://' + path.join(__dirname, 'test.html'))
+	.goto(pagepath)
 	.evaluate( ()=>{
 		require('babel-polyfill');
 		require("babel-register")({
 			presets: ['es2015', 'stage-0']
 		});
-		const isRegister = require('../register').default;
-		const obj = require('../').default;
-		const hasScrollArea = obj.hasScrollArea;
+		const isRegister = require('../src/register').default;
+		const obj = require('../');
 		const hasScrollAreaX = obj.hasScrollAreaX;
 		const hasScrollAreaY = obj.hasScrollAreaY;
+		const hasScrollArea = obj.hasScrollArea;
+
 		const checkObj = {
 			hasScrollArea: typeof obj.hasScrollArea==='function',
 			hasScrollAreaX: typeof obj.hasScrollAreaX==='function',
@@ -47,7 +48,7 @@ nightmare
 		return true;
 	})
 	.evaluate( ()=>{
-		const obj = require('../').default;
+		const obj = require('../');
 		const hasScrollArea = obj.hasScrollArea;
 		const hasScrollAreaX = obj.hasScrollAreaX;
 		const hasScrollAreaY = obj.hasScrollAreaY;

@@ -1,8 +1,8 @@
 {
   "name": "has-scroll-area",
-  "version": "1.0.0",
-  "description": "[honeo/has-scroll-area](https://github.com/honeo/has-scroll-area)  \r [has-scroll-area](https://www.npmjs.com/package/has-scroll-area)",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "要素にスクロール領域が存在するかどうか",
+  "main": "src/index.js",
   "scripts": {
     "test": "node test/test.js"
   },

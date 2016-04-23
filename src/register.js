@@ -2,13 +2,11 @@
 	prototype拡張
 */
 
-// なぜかconst {...} from '...' だとvalueが全てundefinedになる
-import Mod from './has-scroll-area';
-const {
+import {
 	_hasScrollArea,
 	_hasScrollAreaX,
 	_hasScrollAreaY
-} = Mod;
+} from './has-scroll-area.js';
 
 Object.defineProperty(HTMLElement.prototype, 'hasScrollArea', {
     value: _hasScrollArea,

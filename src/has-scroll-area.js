@@ -19,7 +19,7 @@ function _hasScrollArea(){
 	return _hasScrollAreaX.call(this) || _hasScrollAreaY.call(this);
 }
 
-export default {
+export {
 	_hasScrollArea,
 	_hasScrollAreaX,
 	_hasScrollAreaY

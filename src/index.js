@@ -2,13 +2,11 @@
 	単体用
 */
 
-// なぜかconst {...} from '...' だとvalueが全てundefinedになる
-import Mod from './has-scroll-area';
-const {
+import {
 	_hasScrollArea,
 	_hasScrollAreaX,
 	_hasScrollAreaY
-} = Mod;
+} from './has-scroll-area.js';
 
 function validation(arg){
 	if(!(arg instanceof HTMLElement)){
@@ -31,7 +29,7 @@ function hasScrollAreaY(element){
     return _hasScrollAreaY.call(element);
 }
 
-export default {
+export {
 	hasScrollArea,
 	hasScrollAreaX,
 	hasScrollAreaY

@@ -1,9 +1,8 @@
 # has-scroll-area
+要素にスクロール領域が存在するかどうか。  
+
 [honeo/has-scroll-area](https://github.com/honeo/has-scroll-area)  
 [has-scroll-area](https://www.npmjs.com/package/has-scroll-area)
-
-## なにこれ
-要素にスクロール領域が存在するかどうか。
 
 ## 使い方
 ```sh
